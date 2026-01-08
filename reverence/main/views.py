@@ -21,8 +21,8 @@ class CatalogView(ListView):
 
         if size_names:
             queryset = queryset.filter(
-                Q(sizes__names__in=size_names) & Q(sizes__clothingitemsize__available=True)
-            )
+                Q(sizes__name__in=size_names) & Q(sizes__clothingitemsize__available=True)
+            ).distinct()
 
         if min_price:
             queryset = queryset.filter(price__gte=min_price)
