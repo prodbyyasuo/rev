@@ -1,5 +1,4 @@
 from django.views.generic import ListView, DetailView
-
 from .models import ClothingItem, Category, Size
 from django.db.models import Q
 
@@ -7,7 +6,8 @@ from django.db.models import Q
 class CatalogView(ListView):
     model = ClothingItem
     template_name = 'main/product/list.html'
-    context_object_name = 'clothing_items'
+    context_object_name = 'cloting_items'
+
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -26,10 +26,12 @@ class CatalogView(ListView):
 
         if min_price:
             queryset = queryset.filter(price__gte=min_price)
+
         if max_price:
             queryset = queryset.filter(price__lte=max_price)
 
         return queryset
+
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
