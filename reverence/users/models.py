@@ -26,6 +26,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=30, blank=True)
     last_name = models.CharField(max_length=30, blank=True)
+    middle_name = models.CharField(max_length=30, blank=True)
     city = models.CharField(max_length=30, blank=True)
     street = models.CharField(max_length=30, blank=True)
     house_number = models.CharField(max_length=10, blank=True)
