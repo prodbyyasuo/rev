@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: #000;
     color: #fff;
     font-family: "Bodoni", serif;
     font-size: 18px;
@@ -55,8 +55,8 @@ p {
     padding: 0 40px;
     height: 70px;
     justify-content: space-between;
-    border-bottom: 1px solid #ffffff;
-    background-color: #000000;
+    border-bottom: 1px solid #fff;
+    background-color: #000;
 }
 
 .input-container {
@@ -88,17 +88,18 @@ p {
     background-color: #000;
     width: 350px;
     padding: 5px 10px;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #fff;
+    letter-spacing: 2px;
 }
 
 .form_input, textarea {
-    color: #ffffff;
+    color: #fff;
 }
 
 .btnforsearch {
     position: absolute;
     left: 96%;
-    background-color: #000000;
+    background-color: #000;
     top: 26%;
     background: url(../img/search.png);
     border: none;
@@ -126,10 +127,6 @@ p {
     flex: 1;
 }
 
-.catalog {
-
-}
-
 .rev-head {
     font-size: 27px;
     text-align: center;
@@ -139,6 +136,10 @@ p {
 .sidebar {
     min-width: 260px;
     margin-right: 80px;
+}
+
+.sidebar h4 {
+    font-weight: 600;
 }
 
 .category-option {
@@ -159,7 +160,7 @@ p {
     padding-left: 30px;
     padding-top: 2px;
     cursor: pointer;
-    color: #ffffff;
+    color: #fff;
 }
 
 .category-option label::before {
@@ -170,13 +171,13 @@ p {
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-color: #000000;
-    border: 3px solid #ffffff;
+    background-color: #000;
+    border: 3px solid #fff;
     border-radius: 3px;
 }
 
 .category-option input[type="checkbox"]:checked + label::before {
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .category-name {
@@ -206,20 +207,17 @@ input[type="number"] {
     background-color: #000;
     padding-left: 20px;
     padding-bottom: 5px;
-    color: #ffffff;
+    color: #fff;
     outline: none;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #fff;
     transition: border-color 0.3s;
-    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
-    margin 0;
-}
-.sidebar h4 {
-    font-weight: 600;
+    margin: 0;
 }
 
 .card-container {
@@ -229,8 +227,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .card {
     width: 240px;
     height: 460px;
-    background: #000000;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff;
     text-transform: uppercase;
 }
 
@@ -245,18 +243,11 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .detail-img {
     position: relative;
-    width: 100%;
     display: flex;
     justify-content: center;
     max-height: 800px;
-    margin: 0 auto;
 }
 
-.detail-image {
-    width: 100%;
-    height: auto;
-    max-height: 800px;
-}
 .image-nav {
     position: absolute;
     top: 50%;
@@ -270,12 +261,13 @@ input[type="number"]::-webkit-outer-spin-button {
     cursor: pointer;
     font-size: 24px;
     padding: 10px;
-    color: #000000;
+    color: #000;
 }
 
 .detail-description {
     margin: 40px 0 0 20px;
 }
+
 .item-desc {
     font-size: 22px;
     max-width: 700px;
@@ -289,11 +281,10 @@ input[type="number"]::-webkit-outer-spin-button {
 .size-name {
     width: 60px;
     height: 40px;
-    background-color: #000000;
+    background-color: #000;
     border: 1px solid #323232;
-    transition: all .4s ease;
-    color: #ffffff;
-    cursor: pointer;
+    transition: all .3s ease;
+    color: #fff;
 }
 
 .detail-price {
@@ -308,31 +299,20 @@ input[type="number"]::-webkit-outer-spin-button {
     align-items: center;
     border: 1px solid #fff;
     background-color: #000;
-    color: #ffffff;
+    color: #fff;
     transition: all .4s ease;
-    cursor: pointer;
-}
-
-.detail-selected {
-    border: 1px solid #ffffff !important;   /* белая рамка */
-    background-color: rgba(255, 255, 255, 0.12); /* лёгкий белый фон */
-    color: #ffffff;
 }
 
 .default-btn:hover {
     opacity: 0.7;
-    border-color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.08);
 }
 
-.size-name:hover {
-    opacity: 0.7;
-    border-color: #ffffff;        /* белая рамка при наведении */
-    background-color: rgba(255, 255, 255, 0.08);
+.detail-selected {
+    border: 1px solid #fff;
 }
 
 .card-on-catalog {
-    color: #ffffff;
+    color: #fff;
 }
 
 .table-head {
@@ -340,8 +320,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .table-p {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff;
     text-align: right;
 }
 
@@ -355,7 +335,14 @@ input[type="number"]::-webkit-outer-spin-button {
     padding: 40px 0 40px 20px;
 }
 
-.c-item-total, .c-item-price, .c-item-quantity {
+.c-quantity-form input {
+    width: 70px;
+    border-bottom: 1px solid #fff;
+    height: 35px;
+    color: #fff;
+}
+
+.c-item-total, .c-item-quantity, .c-item-price {
     width: 120px;
 }
 
@@ -363,9 +350,59 @@ input[type="number"]::-webkit-outer-spin-button {
     text-align: right;
 }
 
-.c-quantity-form input{
-    width: 70px;
+.block1, .block2 input {
+    width: 250px;
+}
+
+.p-on-order {
+    width: 250px;
+}
+
+.order-item{
+    padding: 10px;
+}
+
+.order {
     border-bottom: 1px solid #fff;
-    height: 35px;
-    color: #fff;
+    padding: 40px 0 40px 20px;
+}
+
+.block-tag, .profile-btn {
+    width: 250px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.loginform p {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loginform p input {
+    all: unset;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    width: 350px;
+}
+
+.form-group input {
+    all: unset;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    width: 350px;
+}
+
+.line {
+    text-decoration: line-through;
+}
+
+.price {
+    font-size: 24px;
+}
+
+.price-on-card {
+    padding-top: 5px;
 }

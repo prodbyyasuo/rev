@@ -9,7 +9,7 @@
     {% comment %} bootstrap {% endcomment %}
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
 
-    {% comment %}css{% endcomment %}
+    {% comment %} css {% endcomment %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
@@ -17,8 +17,14 @@
         <a class="header-logo" href="{% url "main:catalog" %}">
             <img src="{% static 'img/rev.png' %}" alt="">
         </a>
+        {% comment %} <div class="search">
+            <form action="" id="search-form" class="search_form d-flex" style="display: none;">
+                <input type="text" name="q" class="form_input" placeholder="Search">
+                <button type="submit" class="btnforsearch"></button>
+            </form>
+        </div> {% endcomment %}
         <div class="header-nav d-flex gap-4">
-            <a href="#" class="h-profile">
+            <a href="{% url 'users:profile' %}" class="h-profile">
                 <img src="{% static 'img/profile.png' %}" alt="">
             </a>
             <a href="{% url 'cart:cart_detail' %}" class="h-profile">
@@ -29,11 +35,10 @@
                     <img src="{% static 'img/search.png' %}" alt="">
                 </a>
                 <div class="search-popup" id="search-popup" style="display: none;">
-                    <form class="search-form" method="GET" action="" id="search-form">
+                    <form class="search-form" method="GET" action="{% url 'main:catalog' %}" id="search-form">
                         <div class="input-container">
-                            <input type="text" class="form_input" name="q" placeholder="Search">
-                            <button type="submit" class="btnforsearch">
-                            </button>
+                            <input type="text" class="form_input" name="q" placeholder="Search" value="{{ search_query }}">
+                            <button type="submit" class="btnforsearch"></button>
                         </div>
                     </form>
                 </div>
@@ -58,7 +63,7 @@
         })
     </script>
 
-    {% comment %}js for bootstrap {% endcomment %}
+    {% comment %} js for bootstrap {% endcomment %}
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
